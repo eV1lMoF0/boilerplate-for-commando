@@ -3,12 +3,13 @@ const commando = require('discord.js-commando');
 const path = require('path');
 const oneLine = require('common-tags').oneLine;
 const sqlite = require('sqlite');
+const config = require('./config');
 const token = config.token;
-const config = required('config.js')
+
 
 const client = new commando.Client({
   owner: config.owner,
-  commandPrefix: '!!'
+  commandPrefix: config.prefix
 });
 
 client
